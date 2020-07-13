@@ -1,0 +1,16 @@
+<p>servers works!</p>
+<!-- Square Brackets is the property binding notation -->
+<!-- You can bind directives, own components, HTML attributes -->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServers">Add Servers</button>
+  <h4>String interpolation</h4>
+  <p style="color: red">{{allowNewServers}}</p>
+  <h4>Property Binding</h4>
+  <p [innerHTML]="allowNewServers" style="color: darkred"></p>
+<app-server>
+</app-server>
+
+<app-server>
+</app-server>
+
