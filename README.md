@@ -53,3 +53,15 @@ export class ServersComponent implements OnInit {
   class="btn btn-primary"
   [disabled]="!allowNewServers">Add Servers</button>
 ```
+
+##### 4, Property Binding vs. String Interpolation [branch:4_project](//github.com/biroa/Angular-9-Playground/tree/4_project)
+
+```angular2html
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServers">Add Servers</button>
+  <h4>String interpolation</h4>
+  <p style="color: red">{{allowNewServers}}</p>
+  <h4>Property Binding</h4>
+  <p [innerHTML]="allowNewServers" style="color: darkred"></p>
+```
