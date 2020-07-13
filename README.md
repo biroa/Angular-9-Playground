@@ -12,5 +12,16 @@ ng serve // Serve the Application
 ```
 
 ## Notes
+##### 1, Create Angular Components
 
-Updates coming soon ...
+##### 2, String Interpolation
+```typescript
+  serverID = 10;
+  serverStatus = 'active';
+  getServerStatus() {
+    return this.serverStatus;
+```
+```angular2html
+  <!-- String Interpolation -->
+  <p>{{'Server'}} with ID {{ serverID }} is {{getServerStatus()}} </p>
+```
