@@ -4,7 +4,7 @@
 
 ## Installation
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+The installation guide to install AngularCLI & serve the project  
 
 ```bash
 sudo npm install -g @angular/cli@latest // Install Angular Globally
