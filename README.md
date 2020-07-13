@@ -15,6 +15,7 @@ ng serve // Serve the Application
 ##### 1, Create Angular Components
 
 ##### 2, String Interpolation
+* The String Interpolation rule is that the output has to be convertible to String
 ```typescript
   serverID = 10;
   serverStatus = 'active';
