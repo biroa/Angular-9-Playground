@@ -65,3 +65,26 @@ export class ServersComponent implements OnInit {
   <h4>Property Binding</h4>
   <p [innerHTML]="allowNewServers" style="color: darkred"></p>
 ```
+
+##### 5, Event Binding [branch:4_project](//github.com/biroa/Angular-9-Playground/tree/5_project)
+
+```typescript
+serverCreationStatus = 'No Server was Created!';
+onCreateServer = function(){
+    this.serverCreationStatus = 'Server was Created!';
+};
+```
+
+  _We can use event binding in the following way: (event)='method_call() or set a variable'_
+
+```angular2html
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServers"
+  (click)="onCreateServer()">Add Servers</button>
+  <h4>String interpolation</h4>
+  <p style="color: red">{{allowNewServers}}</p>
+  <h4>Property Binding</h4>
+  <p [innerHTML]="allowNewServers" style="color: darkred"></p>
+  <p>{{serverCreationStatus}}</p>
+```
