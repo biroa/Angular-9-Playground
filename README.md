@@ -93,7 +93,7 @@ onCreateServer = function(){
 
   _All type of Angular bindings & interpolation is available in this section!_
   
-  > For the Two-Way data binding we need to import the FormsModule in the app.module.ts file.
+  > For the Two-Way data binding we need to import the FormsModule in the app.module.ts file =>
   > import {FormsModule} from "@angular/forms"; 
   
   * Event Binding
