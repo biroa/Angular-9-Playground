@@ -96,15 +96,20 @@ onCreateServer = function(){
   > For the Two-Way data binding we need to import the FormsModule in the app.module.ts file =>
   > import {FormsModule} from "@angular/forms"; 
   
-  * Event Binding
+  * Event Binding 
+    * _notation_ => (click)
   * Listening to Events
   * Click event
+    * _notation_ => (click)
   * String Interpolation
+    * _notation_ => {{interpolateME}}
   * Output
   * Property Binding
+    * notation => [disabled] = 'true' 
   * Two-Way data binding
+    * _notation_ => [(ngModel)] = "variable"
 
-    
+
 
 ```typescript
 export class ServersComponent implements OnInit {
