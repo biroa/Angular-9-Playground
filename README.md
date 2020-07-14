@@ -89,13 +89,73 @@ onCreateServer = function(){
   <p>{{serverCreationStatus}}</p>
 ```
 
-##### 6, Interpolation, One-way Data Binding, Two-way Data Binding [branch:6_project](//github.com/biroa/Angular-9-Playground/tree/6_project)
+##### 6, All available type of bindings & interpolation [branch:6_project](//github.com/biroa/Angular-9-Playground/tree/6_project)
+
+  _All type of Angular bindings & interpolation is available in this section!_
+  
+  > For the Two-Way data binding we need to import the FormsModule in the app.module.ts file.
+  > import {FormsModule} from "@angular/forms"; 
+  
+  * Event Binding
+  * Listening to Events
+  * Click event
+  * String Interpolation
+  * Output
+  * Property Binding
+  * Two-Way data binding
+
+    
 
 ```typescript
+export class ServersComponent implements OnInit {
+  allowNewServers = false;
+  serverCreationStatus = 'No Server was Created!';
+  serverName = '';
 
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServers = true;
+    }, 2000);
+  }
+
+  onCreateServer = function(){
+    this.serverCreationStatus = 'Server was Created! Name is' + this.serverName;
+  };
+
+  // tslint:disable-next-line:typedef
+  onUpdateServerName(event: Event){
+    this.serverName = (event.target as HTMLInputElement).value;
+  }
+
+  ngOnInit(): void {
+  }
+
+}
 ```
 
 
 ```angular2html
+<label>Server Name</label>
+ <input
+   type="text"
+   class="form-control"
+  (input)="onUpdateServerName($event)">
+<p>{{serverName}}</p>
 
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="serverName">
+
+<!-- Square Brackets is the property binding notation -->
+<!-- You can bind directives, own components, HTML attributes -->
+<button
+  class="btn btn-primary"
+  [disabled]="!allowNewServers"
+  (click)="onCreateServer()">Add Servers</button>
+  <h4>String interpolation</h4>
+  <p style="color: red">{{allowNewServers}}</p>
+  <h4>Property Binding</h4>
+  <p [innerHTML]="allowNewServers" style="color: darkred"></p>
+  <p>{{serverCreationStatus}}</p>
 ```
