@@ -66,7 +66,7 @@ export class ServersComponent implements OnInit {
   <p [innerHTML]="allowNewServers" style="color: darkred"></p>
 ```
 
-##### 5, Event Binding [branch:4_project](//github.com/biroa/Angular-9-Playground/tree/5_project)
+##### 5, Event Binding [branch:5_project](//github.com/biroa/Angular-9-Playground/tree/5_project)
 
 ```typescript
 serverCreationStatus = 'No Server was Created!';
