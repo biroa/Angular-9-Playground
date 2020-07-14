@@ -67,7 +67,7 @@ export class ServersComponent implements OnInit {
 ```
 
 ##### 5, Event Binding [branch:5_project](//github.com/biroa/Angular-9-Playground/tree/5_project)
-
+    
 ```typescript
 serverCreationStatus = 'No Server was Created!';
 onCreateServer = function(){
@@ -87,4 +87,15 @@ onCreateServer = function(){
   <h4>Property Binding</h4>
   <p [innerHTML]="allowNewServers" style="color: darkred"></p>
   <p>{{serverCreationStatus}}</p>
+```
+
+##### 6, Interpolation, One-way Data Binding, Two-way Data Binding [branch:6_project](//github.com/biroa/Angular-9-Playground/tree/6_project)
+
+```typescript
+
+```
+
+
+```angular2html
+
 ```
