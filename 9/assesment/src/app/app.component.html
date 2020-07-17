@@ -1,0 +1,30 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+
+</style>
+
+<!-- Toolbar -->
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4">
+    <button type="button" class="btn btn-primary" (click)="toggle()">Display Details!</button>
+    <p [ngStyle]="{visibility: passwordVisibility}">{{secretPassword}}</p>
+  </div>
+
+  <div class="col-lg-4">
+    <div *ngFor="let log of logs;let index = index;">
+      <p *ngIf="index < 5" [ngStyle]="{backgroundColor:'yellow', color: 'black'}">{{log.time}}</p>
+      <p *ngIf="index >= 5" [ngStyle]="{backgroundColor:'blue', color: 'white'}">{{log.time}}</p>
+    </div>
+  </div>
+</div>
+
+
