@@ -1,4 +1,11 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  ViewChild,
+  ElementRef
+} from '@angular/core';
 
 @Component({
   selector: 'app-cockpit',
@@ -15,7 +22,8 @@ export class CockpitComponent implements OnInit {
      // If you want use the Two-Way Data binding approach comment it out
      // But we converted the code to a local reference approach
      // newServerName = '';
-     newServerContent = '';
+     // newServerContent = '';
+    @ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;
 
   constructor() {
   }
@@ -27,7 +35,7 @@ export class CockpitComponent implements OnInit {
   onAddServer(serverNameInput: HTMLInputElement) {
     this.serverCreated.emit({
         serverName: serverNameInput.value,
-        serverContent: this.newServerContent
+        serverContent: this.serverContentInput.nativeElement.value
       }
     );
   }
@@ -35,7 +43,7 @@ export class CockpitComponent implements OnInit {
   onAddBlueprint(serverNameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
         serverName: serverNameInput.value,
-        serverContent: this.newServerContent
+      serverContent: this.serverContentInput.nativeElement.value
       }
     );
   }
