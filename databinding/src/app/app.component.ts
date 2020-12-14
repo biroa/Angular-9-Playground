@@ -23,4 +23,14 @@ export class AppComponent {
       content: blueprintData.serverContent
     });
   }
+
+  // tslint:disable-next-line:typedef
+  onChangeFirst(){
+    this.serverElements[0].name = 'Changed!';
+  }
+
+  onDestroyFirst() {
+    this.serverElements.slice(0, 1);
+  }
+
 }
