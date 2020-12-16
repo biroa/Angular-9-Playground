@@ -30,6 +30,8 @@ ng serve // Serve the Application
 
 ##### 3, Property Bindings [branch:3_project](//github.com/biroa/Angular-9-Playground/tree/3_project)
 
+###### Square Brackets is the property binding notation eg: [disabled]="!allowNewServers"
+
 ```typescript
 export class ServersComponent implements OnInit {
   allowNewServers = false;
