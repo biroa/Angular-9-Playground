@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-5">
+    <app-recipe-list (recipeEvent)="clickedRecipe=$event">
+      <!--
+      Without creating a method
+      (recipeEvent)="clickedRecipe=$event
+      These are equivalent
+      (recipeEvent)="selectedRecipe($event)"
+       -->
+    </app-recipe-list>
+  </div>
+  <div class="col-md-7">
+    <app-recipe-detail
+      *ngIf="clickedRecipe; else infoText"
+      [recipe]="clickedRecipe">
+    </app-recipe-detail>
+    <ng-template #infoText>
+      <p>Please Select A Recipe!</p>
+    </ng-template>
+  </div>
+</div>

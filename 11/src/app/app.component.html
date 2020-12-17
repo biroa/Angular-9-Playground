@@ -1,0 +1,9 @@
+<app-header (showMenuEvent)="recipeBlock($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipes *ngIf="blockLogic.recipeBlock === true"></app-recipes>
+      <app-shopping-list *ngIf="blockLogic.shoppingBlock === true"></app-shopping-list>
+    </div>
+  </div>
+</div>
