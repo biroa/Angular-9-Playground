@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import {BasicHighlightDirective} from './basic-highlight/basic-highlight.directive';
 import {BetterHighlightDirective} from './better-hightlight/better-highlight.directive';
 import {BetterHighlightWithPropertiesDirective} from './better-highlight-with-properties/better-highlight-with-properties.directive';
-
 import { AppComponent } from './app.component';
 import { UnlessDirective } from './custom/unless.directive';
 
