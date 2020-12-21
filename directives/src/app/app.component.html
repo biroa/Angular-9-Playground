@@ -18,6 +18,7 @@
           </li>
         </ul>
       </div>
+<!--
       <div *ngIf="!onlyOdd">
         <ul>
           <li
@@ -29,6 +30,7 @@
           </li>
         </ul>
       </div>
+
       <p>
         <strong>
         * Asterisk is a notation for structural directive of Angular
@@ -46,6 +48,18 @@
           </li>
         </ul>
       </ng-template>
+-->
+      <div *appUnless="onlyOdd">
+        <ul>
+          <li
+            class="list-group-item"
+            *ngFor="let even of evenNumbers"
+            [ngClass]="{even: even % 2 == 0}"
+          >
+            {{even}}
+          </li>
+        </ul>
+      </div>
 
       <p appBasicHighlight>Style me with with the basic directive!</p>
       <p appBetterHighlight>Style me with with the better directive!</p>
