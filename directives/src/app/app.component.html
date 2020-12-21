@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button
+        class="btn btn-primary"
+        (click)="onlyOdd = !onlyOdd">Only show odd numbers
+      </button>
+      <br><br>
+      <div *ngIf="onlyOdd">
+        <ul class="list-group">
+          <li
+            class="list-group-item"
+            *ngFor="let odd of oddNumbers"
+            [ngClass]="{odd: odd % 2 !== 0}"
+            [ngStyle]="{ backgroundColor: odd % 2 !== 0 ? 'darkgrey' : 'transparent' }"
+          >
+            {{odd}}
+          </li>
+        </ul>
+      </div>
+      <div *ngIf="!onlyOdd">
+        <ul>
+          <li
+            class="list-group-item"
+            *ngFor="let even of evenNumbers"
+            [ngClass]="{even: even % 2 == 0}"
+          >
+            {{even}}
+          </li>
+        </ul>
+      </div>
+      <p>
+        <strong>
+        * Asterisk is a notation for structural directive of Angular
+        to compile the * notation to ng-template with attribute directive format
+        </strong>
+      </p>
+      <ng-template [ngIf]="!onlyOdd">
+        <ul>
+          <li
+            class="list-group-item"
+            *ngFor="let even of evenNumbers"
+            [ngClass]="{even: even % 2 == 0}"
+          >
+            {{even}}
+          </li>
+        </ul>
+      </ng-template>
+
+      <p appBasicHighlight>Style me with with the basic directive!</p>
+      <p appBetterHighlight>Style me with with the better directive!</p>
+      <p [appBetterHighlightWithProperties]="'pink'"
+         [defaultColor]="'deeppink'">Style me with with the better directive
+        with property bindings!</p>
+      <ng-template [ngIf]="onlyOdd">
+        <p>Only odd</p>
+      </ng-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.container {
+  margin-top: 30px;
+}
+
+.odd {
+  color:darkred;
+}
+
+.even {
+  color:black;
+  font-size: large;
+  font-weight: bold;
+  background-color: deeppink;
+}
