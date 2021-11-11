@@ -9,6 +9,7 @@ The installation guide to install AngularCLI & serve the project
 ```bash
 sudo npm install -g @angular/cli@latest // Install Angular Globally
 ng new my-first-app --no-strict // Create 'my-first-app' project in --no-strict mode
+npm install --save bootstrap@3 // Install bootstrap3 to this project
 ng serve // Serve the Application
 ```
 
